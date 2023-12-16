@@ -1,0 +1,161 @@
+<!-- evennement-form.component.html -->
+<app-headerfront (logoutClick)="handleLogout()"></app-headerfront>
+<div class="container w-75 mt-5 mx-auto ">
+  <div class="card">
+    <div class="card-header bg-dark text-white text-center">
+      <h2 style="font-weight: bold;">Adding a painting</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+
+        <!-- Left Column (Form) -->
+        <div class="col-7" style="border-right: 2px solid black ;">
+          <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+            <!-- Event Name -->
+            <div class="form-group">
+              <label for="nom">Painting's Name:</label>
+              <input type="text" id="nom" formControlName="nom" class="form-control">
+              <div *ngIf="eventForm.get('nom')!.hasError('required') && eventForm.get('nom')!.touched" class="text-danger">
+                Event Name is required.
+              </div>
+            </div>
+
+            <!-- Photo URL -->
+            <div class="form-group">
+              <label for="photo">Photo URL:</label>
+              <input type="text" id="photo" formControlName="photo" class="form-control">
+              <div class="col-5">
+                <img *ngIf="eventForm.get('photo')?.valid" [src]="eventForm.get('photo')?.value" class="image">
+              </div>
+            </div>
+
+            <!-- Prix -->
+            <div class="form-group" >
+              <label for="prix">Price:</label>
+              <input type="number" id="prix" formControlName="prix" class="form-control">
+              <div *ngIf="eventForm.get('prix')!.hasError('required') && eventForm.get('prix')!.touched" class="text-danger">
+                Price is required.
+              </div>
+              <div *ngIf="eventForm.get('prix')!.hasError('min') && eventForm.get('prix')!.touched" class="text-danger">
+                Price must be a non-negative number.
+              </div>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label for="date">Date of creation:</label>
+              <input type="date" id="date" formControlName="date" class="form-control">
+              <div *ngIf="eventForm.get('date')!.hasError('required') && eventForm.get('date')!.touched" class="text-danger">
+                Date is required.
+              </div>
+            </div>
+
+            <!-- Estvalide -->
+            <div class="form-group checkbox-wrapper mt-5">
+              <label for="estvalide">: Is Valid</label>
+              <input type="checkbox" id="estvalide" formControlName="estvalide" class="form-check-input">
+              <div class="checkbox-checkmark"></div>
+            </div>
+
+
+
+
+
+
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-dark" style="margin-right: 10px;">Create Event</button>
+            <button type="button" class="btn btn-dark mr-2" (click)="goToHome()">Home</button>
+          </form>
+        </div>
+
+        <!-- Right Column (Image) -->
+        <div class="col-5">
+          <img src="../../assets/images/EventCreation/R (1).jpg" class="image">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<footer class="bg-dark text-center">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+      data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #3b5998;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #55acee;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #dd4b39;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #ac2bac;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #333333;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <a href="" class=" text-white " style="font-weight: bold;" >Voir espace utilisateur</a>
+  <div class="text-center p-3">
+    <a class=" text-white" style="font-weight: bold;" >© 2023 Copyright:GallryGlam.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+

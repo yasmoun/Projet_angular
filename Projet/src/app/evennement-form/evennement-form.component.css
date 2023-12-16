@@ -1,0 +1,61 @@
+/* Add this style to your component's CSS file */
+.checkbox-wrapper {
+    position: relative;
+    padding-left: 30px; /* Adjust as needed for your design */
+    margin-bottom: 15px; /* Adjust as needed for your design */
+  }
+  
+  .checkbox-wrapper input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px; /* Adjust the size of the checkbox */
+    width: 20px; /* Adjust the size of the checkbox */
+    background-color: #fff; /* Background color of the checkbox */
+    border: 2px solid #4285f4; /* Border color of the checkbox */
+    border-radius: 3px; /* Border radius of the checkbox */
+  }
+  
+  .checkbox-wrapper input[type="checkbox"]:checked + .checkbox-checkmark:after {
+    content: '';
+    position: absolute;
+    left: 6px; /* Adjust the position of the checkmark */
+    top: 2px; /* Adjust the position of the checkmark */
+    width: 5px; /* Adjust the size of the checkmark */
+    height: 10px; /* Adjust the size of the checkmark */
+    border: solid #4285f4; /* Color of the checkmark */
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg); /* Rotate the checkmark */
+  }
+
+ .container{
+    height: 150px; 
+    
+ }
+.image {
+    width: 100%; /* La largeur de l'image prendra 100% de la largeur de son conteneur */
+    height: auto; /* La hauteur s'ajustera automatiquement pour maintenir les proportions de l'image */
+    border-radius: 5px; /* Ajoutez une bordure arrondie si vous le souhaitez */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre légère pour un effet de profondeur */
+    margin-top: 20px; /* Ajoutez un espace supplémentaire en haut de l'image si nécessaire */
+  }
+
+.card{
+    margin-top: 8%;
+}
+
+
+footer {
+  margin-top: 25%;
+  bottom: 0;
+  width: 100%;
+}
+ 

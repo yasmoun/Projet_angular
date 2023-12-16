@@ -1,0 +1,22 @@
+<app-headerfront (logoutClick)="handleLogout()"></app-headerfront>
+
+<!-- frontoffice.component.html -->
+
+<div class="row mt-3">
+    <div class="col-md-4 search offset-md-1">
+        <input type="text" placeholder="Search" [(ngModel)]="searchTerm" (input)="applyFilters()" class="form-control search" style="width: 70%;">
+    </div>
+</div>
+
+<div class="row  mt-5 mb-5">
+    <div class="col-3 mb-0" *ngFor="let event of filteredEvents">
+        <app-evennement-card [event]="event"></app-evennement-card>
+    </div>
+</div>
+
+  
+  
+  
+  
+  
+<app-footerfront class="mt-5"></app-footerfront>

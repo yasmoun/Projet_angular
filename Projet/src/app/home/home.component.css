@@ -1,0 +1,56 @@
+.btnadd{
+    margin-left: 80%;
+    margin-bottom: 2%;
+}
+
+
+
+/* styles.css (or styles.scss) */
+
+/* Event Card Container */
+.event-card-container {
+    margin: 20px;
+  }
+  
+  /* Search Input */
+  .mat-form-field {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+
+  
+  /* Event Table */
+  .mat-table {
+    width: 100%;
+  }
+  
+  /* Event Card Content */
+  .mat-card-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Event Table Header Row */
+  .mat-header-row {
+    background-color: #f0f0f0; /* Light Gray */
+  }
+  
+  /* Event Table Row */
+  .mat-row {
+    border-bottom: 1px solid #ddd; /* Light Gray */
+  }
+  
+  /* Event Actions Button Group */
+  .mat-cell button {
+    margin-right: 5px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+
+    .mat-table {
+      overflow-x: auto;
+    }
+  }
+  

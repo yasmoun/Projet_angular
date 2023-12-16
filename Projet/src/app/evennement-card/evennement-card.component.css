@@ -1,0 +1,18 @@
+/* evennement-card.component.css */
+.card {
+    width: 18rem; /* Set a fixed width for the card */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+  }
+  
+  .card-img-top {
+    height: 200px; /* Set a fixed height for the card image */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  }
+  
+  .card-body {
+    height: 100%; /* Ensure the card body takes up the full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  

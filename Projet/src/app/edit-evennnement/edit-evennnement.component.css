@@ -1,0 +1,18 @@
+
+.modal-header-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40; 
+    color: #ffffff; 
+    padding: 1rem; 
+  }
+  
+  .modal-title {
+    margin: 0;
+  }
+  
+
+  
+
+  

@@ -1,0 +1,50 @@
+<mat-card class="event-card mat-elevation-z4" style="margin: 16px;">
+    <mat-card-content>
+
+        <div class="modal-header modal-header-center">
+            <h5 class="modal-title">Edit Painting</h5>
+            <button type="button" class="btn-close" (click)="onCancelClick()" aria-label="Close "></button>
+          </div>
+
+
+      <div class="modal-body">
+        <form [formGroup]="editForm">
+
+          <div class="mb-3">
+            <label for="nom" class="form-label fw-bold">Name of painting:</label>
+            <input type="text" class="form-control" id="nom" formControlName="nom" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="photo" class="form-label fw-bold">Photo URL:</label>
+            <input type="text" class="form-control" id="photo" formControlName="photo" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="prix" class="form-label fw-bold">Price:</label>
+            <input type="number" class="form-control" id="prix" formControlName="prix" required>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="estvalide" formControlName="estvalide" required>
+            <label for="estvalide" class="form-check-label fw-bold">Is Valid</label>
+          </div>
+
+          <div class="mb-3">
+            <label for="date" class="form-label fw-bold">Date of creation :</label>
+            <input type="date" class="form-control" id="date" formControlName="date" required>
+          </div>
+
+
+
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="onCancelClick()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="onSaveClick()">Save</button>
+      </div>
+
+    </mat-card-content>
+  </mat-card>

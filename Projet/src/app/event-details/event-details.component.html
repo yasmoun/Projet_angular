@@ -1,0 +1,30 @@
+<!-- event-details.component.html -->
+<app-headerfront (logoutClick)="handleLogout()"></app-headerfront>
+
+<div class="container mt-5" id="eventDetailsContainer">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="display-4 mb-4">{{currentEvent.nom}}</h1>
+    </div>
+
+    <div class="col-md-6">
+      <img [src]="currentEvent.photo" class="w-100 rounded shadow-lg" alt="{{currentEvent.nom}}">
+    </div>
+
+    <div class="col-md-6 mt-4">
+      <h2 class="display-5 mb-3">{{currentEvent.nom}}</h2>
+      <ul class="list-unstyled">
+        <li class="mb-3"><strong>Price:</strong> ${{currentEvent.prix}}</li>
+        <li class="mb-3"><strong>Date:</strong> {{currentEvent.date | date}}</li>
+        <li class="mb-3">
+          <strong>Valid:</strong>
+          <span class="badge bg-{{currentEvent.estvalide ? 'success' : 'danger'}}">
+            {{currentEvent.estvalide ? 'Yes' : 'No'}}
+          </span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+<app-footerfront class="mt-5"></app-footerfront>
